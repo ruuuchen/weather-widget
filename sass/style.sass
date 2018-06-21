@@ -1,0 +1,283 @@
+// COLOR VARIABLE
+$color_white: #f3f3f3
+$color_yellow: #FFD633
+$color_black: #333
+$color_blue_start: #004789
+// $color_blue_end: #1D678F
+$color_rain: #4DACFF
+$color_white_cloud: #f2f9fe
+$color_blue_cloud: #007bb7
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+*
+  // border: solid 1px
+
+html,body
+  +size(100%,100%)
+  padding: 0px
+  margin: 0px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #71a9cb
+
+label
+  cursor: pointer
+    
+.weather_box
+  width: 50%
+  max-width: 300px
+  position: relative
+  font-family: 'Barlow', sans-serif , 微軟正黑體
+  letter-spacing: 1px
+  background-color: $color_blue_start
+  overflow: hidden
+  border-radius: 5px
+  box-shadow: 0px 10px 50px -10px rgba(black,0.5)
+  cursor: pointer
+  
+  &:hover
+    
+    & .group
+      height: 190px
+    & .curve
+      opacity: 1
+      margin-top: 0px  
+    & .dayweather
+      opacity: 1
+      margin-top: 0px
+  
+.top
+  +size(100%,320px)
+  box-shadow: -10px 10px 10px -10px rgba(black,0.5)      
+  
+  & .bigcloud
+    +size(400px,200px)
+    border-radius: 80px
+    position: absolute
+    left: 80px
+    top: -100px
+    background-color: $color_blue_cloud
+    box-shadow: -10px 10px 10px -10px rgba(black,0.1)   
+    animation: floating 1.5s infinite linear
+  & .cloud1
+    position: absolute
+    left: 130px
+    top: -60px
+    background-color: rgba($color_blue_cloud,0.5)
+    animation-delay: -0.7s
+  & .cloud2  
+    position: absolute
+    left: 200px
+    top: -10px
+    background-color: rgba($color_blue_cloud,0.5)
+    animation-delay: -0.3s
+
+  & .text_area
+    +size(190px,100px)  
+    display: block  
+    position: absolute
+    top: 210px
+    left: 20px 
+    color: $color_white
+
+    & .temperature
+      font-size: 50px
+      line-height: 45px
+      font-weight: 200
+    & .infos
+      margin-top: 15px
+
+      & .address
+        font-size: 14px
+        font-weight: 200
+        color: rgba($color_white,0.7)
+      & .timing
+        font-size: 11px
+        font-weight: 200
+        margin-top: 2px
+        color: rgba($color_white,0.3)
+      & .mark_icon
+        +size(20px,20px)
+        position: absolute
+        top: 60px
+        right: -18px  
+        stroke: rgba($color_white,0.8)
+        stroke-width: 1px
+      & circle
+        fill: rgba($color_white,0.5)  
+
+.group
+  +size(100%,10px)
+  // overflow: hidden
+  transition-duration: 1s
+        
+.hrline
+  +size(90%,1px)
+  background-color: rgba($color_blue_start,0.3)   
+  margin-left: auto
+  margin-right: auto
+    
+.middle
+  +size(100%,80px)
+ 
+  & .curve
+    +size(100%,80px)
+    margin-top: 20px
+    opacity: 0
+    transition: 1s
+
+    & .dot
+      fill: rgba($color_white,1)
+      opacity: 0.5
+    & polyline
+      fill: none
+      stroke: black
+      stroke-width: 1px
+      stroke: rgba($color_white,0.8)
+      opacity: 0.3
+      
+    & text
+      font-size: 11px
+      font-weight: 300
+      fill: rgba($color_white,0.8)    
+    & .temp
+      font-size: 9px
+      transform: translateX(-10px) translateY(25px)  
+      opacity: 0.1  
+    & .time 
+      transform: translateX(-12px) translateY(-18px)
+      opacity: 0.5
+
+.bottom
+  +size(100%,80px)
+  display: flex
+  justify-content: center
+
+  & .dayweather
+    width: calc(100% / 7 - 5px)
+    height: 80px
+    display: inline-block
+    text-align: center
+    opacity: 0
+    margin-top: 20px
+    transition: 1s
+
+    & h5
+      font-size: 5px
+      font-weight: 400
+      margin-top: 15px
+      margin-bottom: 5px
+      color: rgba($color_white,0.8)
+
+    & svg
+      +size(100%,30px)
+      max-width: 30px
+      margin-top: 0px
+    & .sun
+      stroke-width: 6px
+      stroke: rgba($color_yellow,0.5)
+      stroke-dasharray: 2px
+      fill: rgba($color_yellow,1)
+    & .rain
+      stroke-width: 2px
+      stroke: rgba($color_rain,0.5)
+    & .cloud
+      fill: rgba($color_white_cloud,1)  
+      
+.dayweather:nth-child(1)
+  transition-delay: 0.2s
+.dayweather:nth-child(2)
+  transition-delay: 0.3s  
+.dayweather:nth-child(3)
+  transition-delay: 0.4s
+.dayweather:nth-child(4)
+  transition-delay: 0.5s
+.dayweather:nth-child(5)
+  transition-delay: 0.6s
+.dayweather:nth-child(6)
+  transition-delay: 0.7s  
+.dayweather:nth-child(7)
+  transition-delay: 0.8s   
+
+.raindrop
+  +size(100px,1px)
+  background-color: rgba($color_rain,0.2)
+  position: absolute
+  transform-origin: 0% 50%
+  transform: rotate(-65deg)
+  animation: raindrop 1s infinite linear
+  animation-delay: -0.2s
+
+.drop1
+  transform-origin: 20% 100% 
+  transform: rotate(-65deg)
+  animation-delay: -0.4s  
+.drop2
+  transform-origin: 40% 100% 
+  transform: rotate(-65deg) 
+  animation-delay: -0.3s  
+.drop3
+  transform-origin: 60% 100% 
+  transform: rotate(-65deg) 
+  animation-delay: -0.2s
+.drop4
+  transform-origin: 80% 100% 
+  transform: rotate(-65deg) 
+  animation-delay: -0.4s
+.drop5
+  transform-origin: 100% 100% 
+  transform: rotate(-65deg) 
+  animation-delay: -0.1s  
+
+@keyframes raindrop
+  0%
+    opacity: 1
+    top: -300px
+    left: 100%
+  100%
+    opacity: 0.4
+    top: 300px
+    left: 0
+
+@keyframes floating
+  0%
+    transform: rotate(1deg)
+  50%
+    transform: rotate(-5deg)
+  100%
+    transform: rotate(1deg)
+
+.curve
+  transition-duration: 2s
+  & .dot
+    transition-duration: 2s
+    transition-delay: 0.2s
+  & polyline
+    transition-duration: 2s  
+    transition-delay: 0.8s  
+  & .temp    
+    transition-duration: 2s  
+    transition-delay: 0.5s  
+  & .time
+    transition-duration: 2s  
+    transition-delay: 0.5s    
+    
+#switch
+  display: none
+    
+#switch:checked+.group
+  & .dot
+    opacity: 0.8
+  & polyline
+    opacity: 0.5  
+  & .temp
+    opacity: 0.8
+    transform: translateX(-10px) translateY(20px)  
+  & .time
+    transform: translateX(-12px) translateY(-15px)
+    
+      

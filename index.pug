@@ -1,5 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Weather Widget
+
+  link(rel="stylesheet prefetch", href="https://fonts.googleapis.com/css?family=Barlow:200,300,400,500,600")
+  link(rel="stylesheet", href="style.css")
+
+body
+
 .weather_box
-  label  
+  label
     .top
       .bigcloud
       .bigcloud.cloud1
@@ -18,9 +29,9 @@
           svg.mark_icon
             line(x1=10 y1=2 x2=10 y2=18)
             line(x1=0 y1=10 x2=18 y2=10)
-            circle(cx=10 cy=10 r=4)      
-    input#switch(type="checkbox")      
-    .group       
+            circle(cx=10 cy=10 r=4)
+    input#switch(type="checkbox")
+    .group
       .hrline
       br
 
@@ -41,7 +52,7 @@
           text.time(x=190 y=50) 9 pm
           circle.dot(cx=190 cy=50 r=2)
           text.temp(x=190 y=50) 23°Ｃ
-          text.time(x=230 y=40) 10 pm 
+          text.time(x=230 y=40) 10 pm
           circle.dot(cx=230 cy=40 r=2)
           text.temp(x=230 y=40) 25°Ｃ
           text.time(x=270 y=45) 11 pm
@@ -55,28 +66,28 @@
           svg(viewbox="-15 -15 30 30")
             line.rain(x1=1 y1=2 x2=-3 y2=14)
             line.rain(x1=-4 y1=2 x2=-8 y2=12)
-            line.rain(x1=6 y1=2 x2=2 y2=13)  
-            circle.cloud(cx=-5 cy=2 r=6) 
-            circle.cloud(cx=0 cy=2 r=6) 
-            circle.cloud(cx=5 cy=2 r=6) 
-            circle.cloud(cx=2 cy=-2 r=7) 
+            line.rain(x1=6 y1=2 x2=2 y2=13)
+            circle.cloud(cx=-5 cy=2 r=6)
+            circle.cloud(cx=0 cy=2 r=6)
+            circle.cloud(cx=5 cy=2 r=6)
+            circle.cloud(cx=2 cy=-2 r=7)
         .dayweather
           h5 TUE
           svg(viewbox="-15 -15 30 30")
             line.rain(x1=1 y1=2 x2=-3 y2=14)
             line.rain(x1=-4 y1=2 x2=-8 y2=12)
             line.rain(x1=6 y1=2 x2=2 y2=13)
-            circle.cloud(cx=-5 cy=2 r=6) 
-            circle.cloud(cx=0 cy=2 r=6) 
-            circle.cloud(cx=5 cy=2 r=6) 
-            circle.cloud(cx=2 cy=-2 r=7) 
+            circle.cloud(cx=-5 cy=2 r=6)
+            circle.cloud(cx=0 cy=2 r=6)
+            circle.cloud(cx=5 cy=2 r=6)
+            circle.cloud(cx=2 cy=-2 r=7)
         .dayweather
           h5 WED
           svg(viewbox="-15 -15 30 30")
-            circle.cloud(cx=-5 cy=2 r=6) 
-            circle.cloud(cx=0 cy=2 r=6) 
-            circle.cloud(cx=5 cy=2 r=6) 
-            circle.cloud(cx=2 cy=-2 r=7) 
+            circle.cloud(cx=-5 cy=2 r=6)
+            circle.cloud(cx=0 cy=2 r=6)
+            circle.cloud(cx=5 cy=2 r=6)
+            circle.cloud(cx=2 cy=-2 r=7)
         .dayweather
           h5 THU
           svg(viewbox="-15 -15 30 30")
@@ -85,25 +96,25 @@
           h5 FRI
           svg(viewbox="-15 -15 30 30")
             circle.sun(cx=-1 cy=-1 r=8)
-            circle.cloud(cx=-2 cy=6 r=6) 
-            circle.cloud(cx=3 cy=6 r=6) 
-            circle.cloud(cx=8 cy=6 r=6) 
-            circle.cloud(cx=5 cy=2 r=7) 
+            circle.cloud(cx=-2 cy=6 r=6)
+            circle.cloud(cx=3 cy=6 r=6)
+            circle.cloud(cx=8 cy=6 r=6)
+            circle.cloud(cx=5 cy=2 r=7)
         .dayweather
           h5 SAT
           svg(viewbox="-15 -15 30 30")
             circle.sun(cx=-1 cy=-1 r=8)
-            circle.cloud(cx=-2 cy=6 r=6) 
-            circle.cloud(cx=3 cy=6 r=6) 
-            circle.cloud(cx=8 cy=6 r=6) 
-            circle.cloud(cx=5 cy=2 r=7) 
+            circle.cloud(cx=-2 cy=6 r=6)
+            circle.cloud(cx=3 cy=6 r=6)
+            circle.cloud(cx=8 cy=6 r=6)
+            circle.cloud(cx=5 cy=2 r=7)
         .dayweather
           h5 SUN
           svg(viewbox="-15 -15 30 30")
             line.rain(x1=1 y1=2 x2=-3 y2=14)
             line.rain(x1=-4 y1=2 x2=-8 y2=12)
             line.rain(x1=6 y1=2 x2=2 y2=13)
-            circle.cloud(cx=-5 cy=2 r=6) 
-            circle.cloud(cx=0 cy=2 r=6) 
-            circle.cloud(cx=5 cy=2 r=6) 
-            circle.cloud(cx=2 cy=-2 r=7) 
+            circle.cloud(cx=-5 cy=2 r=6)
+            circle.cloud(cx=0 cy=2 r=6)
+            circle.cloud(cx=5 cy=2 r=6)
+            circle.cloud(cx=2 cy=-2 r=7)

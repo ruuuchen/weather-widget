@@ -8,113 +8,112 @@ head
   link(rel="stylesheet", href="css/style.css")
 
 body
+  .weather_box
+    label
+      .top
+        .bigcloud
+        .bigcloud.cloud1
+        .bigcloud.cloud2
+        .raindrop
+        .raindrop.drop1
+        .raindrop.drop2
+        .raindrop.drop3
+        .raindrop.drop4
+        .raindrop.drop5
+        .text_area
+          .temperature 27°Ｃ
+          .infos
+            .address Wenshan Dist., Taipei City
+            .timing NOW
+            svg.mark_icon
+              line(x1=10 y1=2 x2=10 y2=18)
+              line(x1=0 y1=10 x2=18 y2=10)
+              circle(cx=10 cy=10 r=4)
+      input#switch(type="checkbox")
+      .group
+        .hrline
+        br
 
-.weather_box
-  label
-    .top
-      .bigcloud
-      .bigcloud.cloud1
-      .bigcloud.cloud2
-      .raindrop
-      .raindrop.drop1
-      .raindrop.drop2
-      .raindrop.drop3
-      .raindrop.drop4
-      .raindrop.drop5
-      .text_area
-        .temperature 27°Ｃ
-        .infos
-          .address Wenshan Dist., Taipei City
-          .timing NOW
-          svg.mark_icon
-            line(x1=10 y1=2 x2=10 y2=18)
-            line(x1=0 y1=10 x2=18 y2=10)
-            circle(cx=10 cy=10 r=4)
-    input#switch(type="checkbox")
-    .group
-      .hrline
-      br
+        .middle
+          svg.curve
+            text.time(x=30 y=30) 5 pm
+            circle.dot(cx=30 cy=30 r=2)
+            text.temp(x=30 y=30) 27°Ｃ
+            text.time(x=70 y=45) 6 pm
+            circle.dot(cx=70 cy=45 r=2)
+            text.temp(x=70 y=45) 24°Ｃ
+            text.time(x=110 y=50) 7 pm
+            circle.dot(cx=110 cy=50 r=2)
+            text.temp(x=110 y=50) 23°Ｃ
+            text.time(x=150 y=50) 8 pm
+            circle.dot(cx=150 cy=50 r=2)
+            text.temp(x=150 y=50) 23°Ｃ
+            text.time(x=190 y=50) 9 pm
+            circle.dot(cx=190 cy=50 r=2)
+            text.temp(x=190 y=50) 23°Ｃ
+            text.time(x=230 y=40) 10 pm
+            circle.dot(cx=230 cy=40 r=2)
+            text.temp(x=230 y=40) 25°Ｃ
+            text.time(x=270 y=45) 11 pm
+            circle.dot(cx=270 cy=45 r=2)
+            text.temp(x=270 y=45) 24°Ｃ
+            polyline(points="30,30 70,45 110,50 150,50 190,50 230,40 270,45")
 
-      .middle
-        svg.curve
-          text.time(x=30 y=30) 5 pm
-          circle.dot(cx=30 cy=30 r=2)
-          text.temp(x=30 y=30) 27°Ｃ
-          text.time(x=70 y=45) 6 pm
-          circle.dot(cx=70 cy=45 r=2)
-          text.temp(x=70 y=45) 24°Ｃ
-          text.time(x=110 y=50) 7 pm
-          circle.dot(cx=110 cy=50 r=2)
-          text.temp(x=110 y=50) 23°Ｃ
-          text.time(x=150 y=50) 8 pm
-          circle.dot(cx=150 cy=50 r=2)
-          text.temp(x=150 y=50) 23°Ｃ
-          text.time(x=190 y=50) 9 pm
-          circle.dot(cx=190 cy=50 r=2)
-          text.temp(x=190 y=50) 23°Ｃ
-          text.time(x=230 y=40) 10 pm
-          circle.dot(cx=230 cy=40 r=2)
-          text.temp(x=230 y=40) 25°Ｃ
-          text.time(x=270 y=45) 11 pm
-          circle.dot(cx=270 cy=45 r=2)
-          text.temp(x=270 y=45) 24°Ｃ
-          polyline(points="30,30 70,45 110,50 150,50 190,50 230,40 270,45")
-
-      .bottom
-        .dayweather
-          h5 MON
-          svg(viewbox="-15 -15 30 30")
-            line.rain(x1=1 y1=2 x2=-3 y2=14)
-            line.rain(x1=-4 y1=2 x2=-8 y2=12)
-            line.rain(x1=6 y1=2 x2=2 y2=13)
-            circle.cloud(cx=-5 cy=2 r=6)
-            circle.cloud(cx=0 cy=2 r=6)
-            circle.cloud(cx=5 cy=2 r=6)
-            circle.cloud(cx=2 cy=-2 r=7)
-        .dayweather
-          h5 TUE
-          svg(viewbox="-15 -15 30 30")
-            line.rain(x1=1 y1=2 x2=-3 y2=14)
-            line.rain(x1=-4 y1=2 x2=-8 y2=12)
-            line.rain(x1=6 y1=2 x2=2 y2=13)
-            circle.cloud(cx=-5 cy=2 r=6)
-            circle.cloud(cx=0 cy=2 r=6)
-            circle.cloud(cx=5 cy=2 r=6)
-            circle.cloud(cx=2 cy=-2 r=7)
-        .dayweather
-          h5 WED
-          svg(viewbox="-15 -15 30 30")
-            circle.cloud(cx=-5 cy=2 r=6)
-            circle.cloud(cx=0 cy=2 r=6)
-            circle.cloud(cx=5 cy=2 r=6)
-            circle.cloud(cx=2 cy=-2 r=7)
-        .dayweather
-          h5 THU
-          svg(viewbox="-15 -15 30 30")
-            circle.sun(cx=0 cy=0 r=8)
-        .dayweather
-          h5 FRI
-          svg(viewbox="-15 -15 30 30")
-            circle.sun(cx=-1 cy=-1 r=8)
-            circle.cloud(cx=-2 cy=6 r=6)
-            circle.cloud(cx=3 cy=6 r=6)
-            circle.cloud(cx=8 cy=6 r=6)
-            circle.cloud(cx=5 cy=2 r=7)
-        .dayweather
-          h5 SAT
-          svg(viewbox="-15 -15 30 30")
-            circle.sun(cx=-1 cy=-1 r=8)
-            circle.cloud(cx=-2 cy=6 r=6)
-            circle.cloud(cx=3 cy=6 r=6)
-            circle.cloud(cx=8 cy=6 r=6)
-            circle.cloud(cx=5 cy=2 r=7)
-        .dayweather
-          h5 SUN
-          svg(viewbox="-15 -15 30 30")
-            line.rain(x1=1 y1=2 x2=-3 y2=14)
-            line.rain(x1=-4 y1=2 x2=-8 y2=12)
-            line.rain(x1=6 y1=2 x2=2 y2=13)
-            circle.cloud(cx=-5 cy=2 r=6)
-            circle.cloud(cx=0 cy=2 r=6)
-            circle.cloud(cx=5 cy=2 r=6)
-            circle.cloud(cx=2 cy=-2 r=7)
+        .bottom
+          .dayweather
+            h5 MON
+            svg(viewbox="-15 -15 30 30")
+              line.rain(x1=1 y1=2 x2=-3 y2=14)
+              line.rain(x1=-4 y1=2 x2=-8 y2=12)
+              line.rain(x1=6 y1=2 x2=2 y2=13)
+              circle.cloud(cx=-5 cy=2 r=6)
+              circle.cloud(cx=0 cy=2 r=6)
+              circle.cloud(cx=5 cy=2 r=6)
+              circle.cloud(cx=2 cy=-2 r=7)
+          .dayweather
+            h5 TUE
+            svg(viewbox="-15 -15 30 30")
+              line.rain(x1=1 y1=2 x2=-3 y2=14)
+              line.rain(x1=-4 y1=2 x2=-8 y2=12)
+              line.rain(x1=6 y1=2 x2=2 y2=13)
+              circle.cloud(cx=-5 cy=2 r=6)
+              circle.cloud(cx=0 cy=2 r=6)
+              circle.cloud(cx=5 cy=2 r=6)
+              circle.cloud(cx=2 cy=-2 r=7)
+          .dayweather
+            h5 WED
+            svg(viewbox="-15 -15 30 30")
+              circle.cloud(cx=-5 cy=2 r=6)
+              circle.cloud(cx=0 cy=2 r=6)
+              circle.cloud(cx=5 cy=2 r=6)
+              circle.cloud(cx=2 cy=-2 r=7)
+          .dayweather
+            h5 THU
+            svg(viewbox="-15 -15 30 30")
+              circle.sun(cx=0 cy=0 r=8)
+          .dayweather
+            h5 FRI
+            svg(viewbox="-15 -15 30 30")
+              circle.sun(cx=-1 cy=-1 r=8)
+              circle.cloud(cx=-2 cy=6 r=6)
+              circle.cloud(cx=3 cy=6 r=6)
+              circle.cloud(cx=8 cy=6 r=6)
+              circle.cloud(cx=5 cy=2 r=7)
+          .dayweather
+            h5 SAT
+            svg(viewbox="-15 -15 30 30")
+              circle.sun(cx=-1 cy=-1 r=8)
+              circle.cloud(cx=-2 cy=6 r=6)
+              circle.cloud(cx=3 cy=6 r=6)
+              circle.cloud(cx=8 cy=6 r=6)
+              circle.cloud(cx=5 cy=2 r=7)
+          .dayweather
+            h5 SUN
+            svg(viewbox="-15 -15 30 30")
+              line.rain(x1=1 y1=2 x2=-3 y2=14)
+              line.rain(x1=-4 y1=2 x2=-8 y2=12)
+              line.rain(x1=6 y1=2 x2=2 y2=13)
+              circle.cloud(cx=-5 cy=2 r=6)
+              circle.cloud(cx=0 cy=2 r=6)
+              circle.cloud(cx=5 cy=2 r=6)
+              circle.cloud(cx=2 cy=-2 r=7)
